@@ -9,7 +9,7 @@ https://andy-yxl.github.io/snake/
 方向鍵或 WASD 移動，R 重新開始。
 
 ## 使用技術
-HTML5 Canvas 2D、 JavaScript、CSS Flexbox
+HTML5 Canvas 2D、JavaScript、CSS Flexbox
 
 ## 實作內容
 - 蛇身以陣列儲存，移動由增加並去掉尾巴的方式實現，吃到食物時跳過去尾過程，達到變長的效果。
