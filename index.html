@@ -42,7 +42,7 @@
         let score = 0;
         let gameOver = false;
 
-        let food = randomCell();        
+            
 
        
 
@@ -61,6 +61,13 @@
                 y: Math.floor(Math.random() * ROWS),
             };
         }
+
+        
+        let food = randomCell();   
+
+
+
+        
 
         //每一幀更新要判定的
         function update() {
@@ -159,7 +166,7 @@
             const next = KEY_TO_DIR[key];
             if(!next) return;                                       //沒有值就return
             if (next.x === -dir.x && next.y === -dir.y) return;     //若與現在方向相反也return
-            dir = next
+            dir = next;
                        
         });
 
