@@ -22,4 +22,4 @@ HTML5 Canvas 2D、JavaScript、CSS Flexbox
 - 同一個更新週期內連按兩次方向鍵可繞過反向檢查，預計改為記憶前一次移動方向來解決。
 
 ## 遊戲畫面
-![Uploading image.png…]()
+<img width="1034" height="898" alt="snake" src="https://github.com/user-attachments/assets/bd3dc92a-beb0-43fd-91ca-a15d6428257a" />
