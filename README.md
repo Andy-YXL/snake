@@ -20,3 +20,6 @@ HTML5 Canvas 2D、JavaScript、CSS Flexbox
 ## 已知問題
 - 食物有機會生成在蛇身上，預計加入判斷方式進行食物重抽。
 - 同一個更新週期內連按兩次方向鍵可繞過反向檢查，預計改為記憶前一次移動方向來解決。
+
+## 遊戲畫面
+![Uploading image.png…]()
