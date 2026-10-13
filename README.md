@@ -9,7 +9,7 @@ https://andy-yxl.github.io/snake/
 方向鍵或 WASD 移動，R 重新開始。
 
 ## 使用技術
-HTML5 Canvas 2D、 JavaScript、CSS Flexbox
+HTML5 Canvas 2D、JavaScript、CSS Flexbox
 
 ## 實作內容
 - 蛇身以陣列儲存，移動由增加並去掉尾巴的方式實現，吃到食物時跳過去尾過程，達到變長的效果。
@@ -21,3 +21,6 @@ HTML5 Canvas 2D、 JavaScript、CSS Flexbox
 - ~~食物有機會生成在蛇身上，預計加入判斷方式進行食物重抽。~~
 - ~~用if判斷食物是否在蛇身上，但當蛇太長的時候還是會看不到食物。~~
 - 同一個更新週期內連按兩次方向鍵可繞過反向檢查，預計改為記憶前一次移動方向來解決。
+
+## 遊戲畫面
+<img width="1034" height="898" alt="snake" src="https://github.com/user-attachments/assets/bd3dc92a-beb0-43fd-91ca-a15d6428257a" />
