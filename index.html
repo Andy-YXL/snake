@@ -62,8 +62,26 @@
             };
         }
 
-        
-        let food = randomCell();   
+        function spawnFood(){
+
+        // 把蛇身的每一節編碼成一個數字，放進 Set
+        const occupied = new Set(snake.map(seg => seg.y * COLS + seg.x));
+
+        // 收集所有沒被佔用的格子
+        const empty = [];
+        for (let i = 0; i < COLS * ROWS; i++) {
+            if (!occupied.has(i)) empty.push(i);
+        }
+
+        if (empty.length === 0) return null;   // 全盤佔滿 = 通關
+
+        // 從空格裡隨機挑一個，再解碼回座標
+        const pick = empty[Math.floor(Math.random() * empty.length)];
+        return { x: pick % COLS, y: Math.floor(pick / COLS) };
+        }
+
+
+        let food = spawnFood();   
 
 
 
@@ -92,8 +110,11 @@
             snake.unshift(newHead);                 
 
             if (newHead.x === food.x && newHead.y === food.y) {
-                food = randomCell();                // 吃到食物後，生出新食物，且不將尾巴消除
+                food = spawnFood();                // 吃到食物後，生出新食物，且不將尾巴消除
                 score = score +1;
+                if (food === null) {
+                    gameOver = ture;
+                }
             } else {
                 snake.pop();                        // 砍掉尾巴 
             }
@@ -104,6 +125,7 @@
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);  // 清掉指定範圍的圖
             drawCell(food.x, food.y, '#ef4444');
+            
 
 
             //將頭部以不同顏色顯示
@@ -111,6 +133,7 @@
                 const color = i === 0 ? '#86efac' : '#4ade80';
                 drawCell(seg.x, seg.y, color);
             });
+
 
             ctx.fillStyle = '#fff';
             ctx.font = '16px sans-serif';
@@ -135,7 +158,7 @@
         function reset () {
             snake = [{ x: 7, y: 5},{ x: 6, y: 5},{ x: 5, y: 5}];
             dir = { x: 1, y: 0 };
-            food = randomCell();
+            food = spawnFood();
             score = 0;
             gameOver = false;
         }
